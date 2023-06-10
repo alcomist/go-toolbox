@@ -16,7 +16,7 @@ func MustGet(s string) []*ini.Section {
 
 	sections := make([]*ini.Section, 0)
 
-	f, err := LoadIni(file.Home() + "/config.ini")
+	f, err := LoadIni(file.Home() + "/config/config.ini")
 	if err != nil {
 		log.Println(err)
 		return sections
