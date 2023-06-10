@@ -42,7 +42,6 @@ func MustGet(s string, c *mysql.Config) *DB {
 	sqlxDB, err := sqlx.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal(err)
-		return nil
 	}
 
 	dbInst.db[s] = &DB{sqlxDB}
